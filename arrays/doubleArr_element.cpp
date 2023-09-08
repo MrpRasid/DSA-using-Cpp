@@ -11,7 +11,11 @@ int main(){
     cout<<"The out put are : ";
 
     for(int i=0;i<n;i++){
-        int num = arr[i] *2;
-        cout<<num <<endl;
+        arr[i] = arr[i] *2;
+       
+    }
+
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
     }
 }
