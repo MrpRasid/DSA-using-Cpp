@@ -12,6 +12,10 @@ int main(){
         for(int j=0;j<=i;j++){
             cout<<num;
             num++;
+
+            if(j<i){
+                cout<<"*";
+            }
         }
 
         
@@ -27,6 +31,10 @@ int main(){
         for(int j=0;j<n-i;j++){
             cout<<k;
             k++;
+
+            if(j<n-i-1){
+                cout<<"*";
+            }
         }
         start = start- (n-i-1);
         cout<<endl;
