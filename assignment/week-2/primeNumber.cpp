@@ -1,17 +1,13 @@
 #include<iostream>
 using namespace std;
 
-void CheckNum(int n){
-    for(int i=0;i<n;i++){
-       
-        for(int j=2;j<i-1;j++){
-           
-            if(i/j != 0){
-                // cout<<"hello";
-                cout<<i<<" ";
-            }
-        }
+bool CheckNum(int n){
+  for(int i=2;i<n;i++){
+    if(n%i == 0){
+        return false;
     }
+  }
+  return true;
   
 }
 
@@ -20,6 +16,11 @@ int main(){
     cout<<"Enter the number: ";
     cin>>n;
 
-    CheckNum(n);
+   bool isPrime = CheckNum(n);
+   if(isPrime){
+    cout<<n<<" is a prime number";
+   }else{
+    cout<<n<<" is not a prime number";
+   }
 
 }
